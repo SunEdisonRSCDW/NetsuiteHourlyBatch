@@ -1,0 +1,5 @@
+{
+"bucketname":"sunedisondata",
+    "keyrequest":"request.json",
+    "keyresponse":"response.json"
+}
