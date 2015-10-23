@@ -86,14 +86,14 @@ var options = {
     path: '/app/site/hosting/restlet.nl?script=516&deploy=1',
     method: 'POST',
     headers: {
-        'Authorization' : 'NLAuth nlauth_account="1292185",nlauth_email="abhardwaj@sunedison.com",nlauth_signature="F9nuvdgetu1?",nlauth_role="1111"',   //Username and Password confidential. 
+        'Authorization' : 'NLAuth nlauth_account="1292185",nlauth_email="abhardwaj@sunedison.com",nlauth_signature="XXXX?",nlauth_role="1111"',   //Username and Password confidential. 
         'Content-Type': 'application/json',
         'User-Agent': 'SuiteScript-Call'
     }
 };
 
 //Connection string to connect to Redshift with username and password. 
-var conString = "postgresql://abhardwaj:Master12@sunedisondatawarehouse.cgnr3c8sn1sz.us-west-2.redshift.amazonaws.com:5439/sunedison";
+var conString = "postgresql://XXXX:XXXX@sunedisondatawarehouse.cgnr3c8sn1sz.us-west-2.redshift.amazonaws.com:5439/sunedison";
 //Query string to insert data into Redshift. 
 var queryTextInsertRequest = 'INSERT INTO suned_redshift (suned_cust_id, quote_system_size, quote_ef_cost_per_watt, quote_year1_production, cust_pre_payment, quote_master_lease_pay_esc_rate, quote_rebate, quote_hipbi_year1_value, quote_hipbi_tenure, quote_hipbi_annual_derate, quote_state_tax_rate, quote_current_utility_cost, quote_post_solar_utility_cost, quote_proposal_id, quote_call_version_id, quote_auth_code, system_module_id, system_module_quantity, system_inverter_id, system_inverter_quantity, system_mounting_type, contract_calcmap_current_date, contract_installer_client_name, contract_calcmap_dealer_name, contract_calcmap_howner_0_first_name, contract_calcmap_howner_0_last_name, contract_calcmap_howner_1_first_name, contract_calcmap_howner_1_last_name, contract_product_type, contract_calcmap_n_of_howners, contract_calcmap_howner_0_address, contract_calcmap_howner_0_city, contract_calcmap_howner_0_state, contract_calcmap_howner_0_zipcode, contract_calcmap_howner_0_phone, contract_calcmap_howner_0_email, contract_calcmap_howner_1_address, contract_calcmap_howner_1_city, contract_calcmap_howner_1_state, contract_calcmap_howner_1_zipcode, contract_calcmap_howner_1_phone, contract_calcmap_howner_1_email, contract_calcmap_howner_2_address, contract_calcmap_howner_2_city, contract_calcmap_howner_2_state, contract_calcmap_howner_2_zipcode, contract_calcmap_howner_2_phone, contract_calcmap_howner_2_email, contract_installer_client_phone, contract_production_0_col2, contract_calcmap_lifetime_kwh, array_number, module_type, module_quantity, shading, tilt, azimuth, orientation, monthly_production_values, degradation_rates) values ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21,$22,$23,$24,$25,$26,$27,$28,$29,$30,$31,$32,$33,$34,$35,$36,$37,$38,$39,$40,$41,$42,$43,$44,$45,$46,$47,$48,$49,$50,$51,$52,$53,$54,$55,$56,$57,$58,$59,$60)';
 var queryTextInsertResonse = 'INSERT INTO response (customerleasepayments, pricingquoteid, downpayment, leaseterm, sunedcustid, estimatedannualoutput, uniquefinancialrunid, terminationvalues, suned_timestamp, financialmodelversion, callversionid, guaranteedannualoutput) values ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)';
